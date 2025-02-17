@@ -11,7 +11,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="flex items-center space-x-4">
             <img 
-              src="/logo-removebg-preview.png" 
+              src="/Yalda-Nikookar-Portfolio/logo-removebg-preview.png"  
               alt="Logo" 
               className="h-10 w-auto" 
             />
