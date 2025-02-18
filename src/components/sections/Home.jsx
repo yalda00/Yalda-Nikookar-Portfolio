@@ -1,4 +1,7 @@
 import { RevealOnScroll } from "../ReviewOnScroll";
+import { FaGithub } from 'react-icons/fa'; 
+import { FaEnvelope } from 'react-icons/fa'; 
+import { FaLinkedin } from 'react-icons/fa';
 
 export const Home = () => {
     return <section id="home" className="min-h-screen flex items-center justify-center relative">
@@ -45,6 +48,17 @@ export const Home = () => {
             }}
             >
             Contact Me
+            </a>
+        </div>
+        <div className="flex justify-center space-x-6 mt-8"> 
+            <a href="https://github.com/yalda00" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="h-8 w-8" /> 
+            </a>
+            <a href="mailto:yaldanikookar06@gmail.com" target="_blank" rel="noopener noreferrer">
+                <FaEnvelope className="h-8 w-8" />
+            </a>
+            <a href="https://www.linkedin.com/in/yalda-nikookar-074977219/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="h-8 w-8" />
             </a>
         </div>
         </div>

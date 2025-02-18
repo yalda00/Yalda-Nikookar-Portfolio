@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "homepage":"https://yalda00.github.io/Yalda-Nikookar-Portfolio",
+  "homepage": "https://yalda00.github.io/Yalda-Nikookar-Portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,10 +13,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@mui/icons-material": "^6.4.4",
     "@tailwindcss/vite": "^4.0.6",
     "emailjs-com": "^3.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
     "tailwindcss": "^4.0.6"
   },
   "devDependencies": {
