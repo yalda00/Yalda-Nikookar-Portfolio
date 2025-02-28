@@ -1,5 +1,6 @@
 import { RevealOnScroll } from "../ReviewOnScroll";
-
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; 
+import { Link } from 'react-router-dom';
 
 export const Projects = () => {
     const handleHover = (e) => {
@@ -44,14 +45,14 @@ export const Projects = () => {
                         onMouseLeave={handleMouseLeave}
                     >
                         <h3 className="font-semibold text-pink-300">TremorTracker: Neuro-GLoves</h3>
-                        <p className="mb-3">
-                            Wearable device designed to suppress hand tremors, offering a practical solution for individuals with Parkinson’s disease or other conditions that cause involuntary hand movements.
+                        <p className="mb-2">
+                            Device designed to suppress hand tremors, offering a solution for individuals with Parkinson’s disease or other conditions causing involuntary hand movements.
                         </p>
-                        <div className="flex flex-wrap gap-2 mb-4">
+                        <div className="flex flex-wrap gap-1 mb-2">
                             {["Arduino", "Figma", "React"].map((tech, key) => (
                                 <span
                                     key={key}
-                                    className="bg-pink-500/10 text-pink-500 py-1 px-3 rounded-full text-sm transition-all"
+                                    className="bg-pink-500/10 text-pink-500 py-1 px-2 rounded-full text-sm transition-all"
                                     onMouseEnter={handleHover}
                                     onMouseLeave={handleMouseLeave}
                                 >
@@ -59,14 +60,19 @@ export const Projects = () => {
                                 </span>
                             ))}
                         </div>
-                        <div className="flex justify-between items-center">
-                            <a className="view-project text-pink-400 my-4"  
-                               onMouseEnter={handleHover} 
-                               onMouseLeave={handleMouseLeave} 
+                        <div className="flex items-center space-x-3">
+                            <a 
+                                className="view-project text-pink-400 my-2 flex items-center space-x-3"  
+                                onMouseEnter={handleHover} 
+                                onMouseLeave={handleMouseLeave}
                             >
-                                View Project ➡️
+                                <span>View Project →</span>
+                                <a href="https://github.com/yalda00/Steady---Neuro-Gloves" target="_blank" rel="noopener noreferrer">
+                                <FaGithub className="h-5 w-5" />
+                                </a>
                             </a>
                         </div>
+
                     </div>
 
                     <div
@@ -76,7 +82,7 @@ export const Projects = () => {
                     >
                         <h3 className="font-semibold text-pink-300">Aikya: NASA/NSS Prize Winner</h3>
                         <p className="mb-3">
-                            Designed 'Aikya,' a settlement orbiting Ganymede, using advanced CAD techniques and UI design to support and sustain 10,000 residents.
+                            Designed 'Aikya,' a settlement orbiting Ganymede, using advanced CAD techniques and UI design to sustain 10,000 habitants.
                         </p>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {["UI/UX", "Figma", "Python"].map((tech, key) => (
@@ -90,13 +96,16 @@ export const Projects = () => {
                                 </span>
                             ))}
                         </div>
-                        <div className="flex justify-between items-center">
-                            <a className="view-project text-pink-400 my-4" 
-                               onMouseEnter={handleHover} 
-                               onMouseLeave={handleMouseLeave}
-                            >
-                                View Project ➡️
-                            </a>
+                        <div className="flex items-center space-x-2 my-4">
+                        <Link
+                            to="/project/aikya"
+                            className="text-pink-400 flex items-center space-x-3"
+                            onMouseEnter={handleHover}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <span>View Project →</span>
+                            <FaExternalLinkAlt className="h-5 w-5" />
+                        </Link>
                         </div>
                     </div>
 
@@ -126,7 +135,7 @@ export const Projects = () => {
                                onMouseEnter={handleHover} 
                                onMouseLeave={handleMouseLeave} 
                             >
-                                View Project ➡️
+                                View Project →
                             </a>
                         </div>
                     </div>

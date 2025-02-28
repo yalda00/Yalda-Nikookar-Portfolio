@@ -52,7 +52,7 @@ const App = () => {
         random: true, 
         straight: false 
       },
-      number: { value: 80, density: { enable: true } },
+      number: { value: 50, density: { enable: true } },
       opacity: {
         value: 0.5,
         animation: {
