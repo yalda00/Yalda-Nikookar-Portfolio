@@ -18,9 +18,9 @@ export const About = () => {
     ref.current.style.boxShadow = 'none';
   };
 
-  const frontendSkills = ["React", "TypeScript", "TailwindCSS", "NextJS", "HTML/CSS"];
-  const backendSkills = ["C++", "NodeJS", "Python", "AWS", "Linux", "MongoDB", "MATLAB"];
-  const engSkills = ["SOLIDWORKS", "PCB Design", "AutoCAD", "Fusion360", "Adobe", "Figma"];
+  const frontendSkills = ["React", "TypeScript", "TailwindCSS", "NextJS", "HTML/CSS", "Figma", "SEO"];
+  const backendSkills = ["C++", "NodeJS", "Python", "AWS Lambda", "AWS S3", "Linux", "MongoDB", "MATLAB", "API GateWay"];
+  const engSkills = ["SOLIDWORKS", "PCB Design", "AutoCAD", "Fusion360", "Adobe"];
 
   return (
     <section id="about" className="min-h-screen flex items-center justify-center py-20">
@@ -107,6 +107,10 @@ export const About = () => {
             <div ref={workRef} onMouseEnter={() => handleHover(workRef)} onMouseLeave={() => handleMouseLeave(workRef)} className="p-6 rounded-xl border-white/10 border space-y-6">
               <h3 className="text-xl font-bold">👩‍💻 Work Experience</h3>
               <div className="space-y-4">
+              <div>
+                  <h4 className="font-semibold text-pink-300">Front-End Developer @ While She is True (Feb. 2025 - Present)</h4>
+                  <p className="text-gray-300">Led the creation of user-friendly websites, improving design to ensure a positive experience for all users..</p>
+                </div>
                 <div>
                   <h4 className="font-semibold text-pink-300">AI Software Engineer @ RemitBee/Hostalky (Jan. 2025 - Present)</h4>
                   <p className="text-gray-300">Developing note scanning, speech-to-text, and improving various AI functionalities to optimize healthcare workflows.</p>
@@ -116,7 +120,7 @@ export const About = () => {
                   <p className="text-gray-300">Training LLM agents to make informed and strategic political decisions.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-pink-300">Internal Systems Lead @ National Space Society (Sept. 2023 - May 2024)</h4>
+                  <h4 className="font-semibold text-pink-300">Systems Engineer @ National Space Society (Sept. 2023 - May 2024)</h4>
                   <p className="text-gray-300">Designed 'Aikya,' a settlement orbiting Ganymede, using advanced CAD techniques and UI design to support and sustain 10,000 residents.</p>
                 </div>
               </div>

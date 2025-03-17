@@ -11,6 +11,7 @@ import { About } from './components/sections/About'
 import { Projects } from './components/sections/Projects'
 import { Contact } from './components/sections/Contact'
 import Aikya from './components/sections/Project/Aikya'
+import Model from './components/sections/Project/Model'
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -37,6 +38,7 @@ function App() {
             } />
 
             <Route path="/project/aikya" element={<Aikya />} />
+            <Route path="/project/model" element={<Model />} />
           </Routes>
         </div>
       </Router>

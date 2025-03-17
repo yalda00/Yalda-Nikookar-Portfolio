@@ -131,12 +131,15 @@ export const Projects = () => {
                             ))}
                         </div>
                         <div className="flex justify-between items-center">
-                            <a className="view-project text-pink-400 my-4"  
-                               onMouseEnter={handleHover} 
-                               onMouseLeave={handleMouseLeave} 
-                            >
-                                View Project →
-                            </a>
+                        <Link
+                            to="/project/model"
+                            className="text-pink-400 flex items-center space-x-3"
+                            onMouseEnter={handleHover}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <span>View Project →</span>
+                            <FaExternalLinkAlt className="h-5 w-5" />
+                        </Link>
                         </div>
                     </div>
                 </div>
