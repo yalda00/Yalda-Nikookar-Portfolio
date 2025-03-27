@@ -103,7 +103,7 @@ export const Projects = () => {
                         <ProjectCard 
                             title="TremorTracker: Neuro-GLoves"
                             description="Device designed to suppress hand tremors, offering a solution for individuals with Parkinson's disease or other conditions causing involuntary hand movements."
-                            technologies={["Arduino", "Figma", "React"]}
+                            technologies={["Arduino", "Robotics", "React"]}
                             githubLink="https://github.com/yalda00/Steady---Neuro-Gloves"
                             projectLink="https://github.com/yalda00/Steady---Neuro-Gloves"
                         />

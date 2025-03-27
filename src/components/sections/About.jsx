@@ -7,7 +7,7 @@ export const About = () => {
   
   const frontendSkills = ["React", "TypeScript", "TailwindCSS", "NextJS", "HTML/CSS", "Figma", "SEO", "ThreeJS", "Vercel/Vite"];
   const backendSkills = ["C++", "NodeJS", "Python", "AWS Lambda", "AWS S3", "Linux", "MongoDB", "MATLAB", "API Gateway"];
-  const engSkills = ["SOLIDWORKS", "PCB Design", "AutoCAD", "Fusion360", "Adobe"];
+  const engSkills = ["SOLIDWORKS", "PCB Design", "AutoCAD", "Fusion360", "Adobe", "Robotics"];
 
   const educationItems = [
     {
@@ -20,10 +20,10 @@ export const About = () => {
 
   const workItems = [
     {
-      title: "Front-End Developer",
-      company: "While She is True",
-      period: "Feb. 2025 - Present",
-      description: "Led the creation of user-friendly websites, improving design to ensure a positive experience for all users."
+      title: "Systems Integration Engineer",
+      company: "UWAFT",
+      period: "March. 2025 - Present",
+      description: "Integrating AWD electric powertrain into a Cadillac Lyriq SUV"
     },
     {
       title: "AI Software Engineer",
@@ -32,9 +32,15 @@ export const About = () => {
       description: "Developing note scanning, speech-to-text, and improving various AI functionalities to optimize healthcare workflows."
     },
     {
+      title: "Front-End Developer",
+      company: "While She is True",
+      period: "Jan. 2025 - April 2025",
+      description: "Led the creation of user-friendly websites, improving design to ensure a positive experience for all users."
+    },
+    {
       title: "Machine Learning Researcher",
       company: "WAT.AI",
-      period: "Sept. 2024 - Present",
+      period: "Sept. 2024 - March 2025",
       description: "Training LLM agents to make informed and strategic political decisions."
     },
     {
