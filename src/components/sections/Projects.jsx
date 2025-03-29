@@ -27,7 +27,7 @@ export const Projects = () => {
         }
     };
 
-    const ProjectCard = ({ title, description, technologies, githubLink, projectLink, isExternalLink = true }) => {
+    const ProjectCard = ({ title, description, technologies, githubLink, projectLink, imageUrl, isExternalLink = true }) => {
         return (
             <div
                 className="project-card group relative text-left p-6 rounded-xl border border-white/10 transition-all 
@@ -37,8 +37,17 @@ export const Projects = () => {
                 onMouseEnter={handleHover}
                 onMouseLeave={handleMouseLeave}
             >
-                {/* Subtle hover effect overlay */}
                 <div className="absolute inset-0 bg-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                {imageUrl && (
+                    <div className="mb-4 -mx-6 -mt-6 h-48 overflow-hidden">
+                        <img 
+                            src={imageUrl} 
+                            alt={title} 
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                        />
+                    </div>
+                )}
                 
                 <h3 className="font-semibold text-pink-300 mb-3 relative z-10">{title}</h3>
                 <p className="mb-3 text-gray-300 relative z-10">{description}</p>
@@ -106,6 +115,7 @@ export const Projects = () => {
                             technologies={["Arduino", "Robotics", "React"]}
                             githubLink="https://github.com/yalda00/Steady---Neuro-Gloves"
                             projectLink="https://github.com/yalda00/Steady---Neuro-Gloves"
+                            imageUrl="/Yalda-Nikookar-Portfolio/steay-pic.jpeg"
                         />
                         <ProjectCard 
                             title="Aikya: NASA/NSS Prize Winner"
@@ -113,6 +123,7 @@ export const Projects = () => {
                             technologies={["UI/UX", "Figma", "Python"]}
                             projectLink="/project/aikya"
                             isExternalLink={false}
+                            imageUrl="/Yalda-Nikookar-Portfolio/Aikya Settlement Poster (3)_page-0001.png"
                         />
                         <ProjectCard 
                             title="3D Modeling Projects"
@@ -120,6 +131,7 @@ export const Projects = () => {
                             technologies={["Solidworks", "Rendering", "FEA"]}
                             projectLink="/project/model"
                             isExternalLink={false}
+                            imageUrl="/Yalda-Nikookar-Portfolio/solidworks-vector-logo.png"
                         />
                     </div>
                 </div>
