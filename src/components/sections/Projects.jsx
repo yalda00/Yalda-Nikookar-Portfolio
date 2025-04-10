@@ -108,11 +108,11 @@ export const Projects = () => {
                                    tracking-tight">
                         My Projects 🛠️
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-8">
                         <ProjectCard 
                             title="TremorTracker: Neuro-GLoves"
                             description="Device designed to suppress hand tremors, offering a solution for individuals with Parkinson's disease or other conditions causing involuntary hand movements."
-                            technologies={["Arduino", "Robotics", "React"]}
+                            technologies={["Arduino", "Robotics", "Circuit Design"]}
                             githubLink="https://github.com/yalda00/Steady---Neuro-Gloves"
                             projectLink="https://github.com/yalda00/Steady---Neuro-Gloves"
                             imageUrl="/Yalda-Nikookar-Portfolio/steay-pic.jpeg"
@@ -128,10 +128,18 @@ export const Projects = () => {
                         <ProjectCard 
                             title="3D Modeling Projects"
                             description="Designed and developed intricate 3D models using SolidWorks, focusing on precision engineering and functional optimization."
-                            technologies={["Solidworks", "Rendering", "FEA"]}
+                            technologies={["Solidworks", "Rendering", "Finite Element Analysis"]}
                             projectLink="/project/model"
                             isExternalLink={false}
                             imageUrl="/Yalda-Nikookar-Portfolio/solidworks-vector-logo.png"
+                        />
+                        <ProjectCard 
+                            title="Legislative LLM"
+                            description="Designed and evaluated four RAG-based architectures in decision-making frameworks, comparing a Fast Mind–Slow Mind and a courtroom model with two lawyers and a judge."
+                            technologies={["LLM", "LangChain", "Python"]}
+                            githubLink="https://github.com/Madhav-Malhotra/political-chatbot.git"
+                            projectLink="https://github.com/Madhav-Malhotra/political-chatbot.git"
+                            imageUrl="/Yalda-Nikookar-Portfolio/political-llm.jpeg"
                         />
                     </div>
                 </div>
