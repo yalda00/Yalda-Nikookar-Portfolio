@@ -20,10 +20,10 @@ export const About = () => {
 
   const workItems = [
     {
-      title: "Systems Integration Engineer",
-      company: "UWAFT",
+      title: "AI Development & Product Manager",
+      company: "RemitBee/Hostalky",
       period: "March. 2025 - Present",
-      description: "Integrating AWD electric powertrain into a Cadillac Lyriq SUV"
+      description: "Developing an MVP of an AI-powered HR platform to enhance hiring fairness, featuring AI-driven resume screening and bias mitigation."
     },
     {
       title: "AI Software Engineer",
@@ -38,16 +38,22 @@ export const About = () => {
       description: "Led the creation of user-friendly websites, improving design to ensure a positive experience for all users."
     },
     {
+      title: "Systems Integration Engineer",
+      company: "UWAFT",
+      period: "Sept. 2024 - Present",
+      description: "Integrating AWD electric powertrain into a Cadillac Lyriq SUV"
+    },
+    {
       title: "Machine Learning Researcher",
       company: "WAT.AI",
       period: "Sept. 2024 - March 2025",
       description: "Training LLM agents to make informed and strategic political decisions."
     },
     {
-      title: "Systems Engineer",
+      title: "Systems Engineer & Project Lead",
       company: "National Space Society",
       period: "Sept. 2023 - May 2024",
-      description: "Designed 'Aikya,' a settlement orbiting Ganymede, using advanced CAD techniques and UI design to support and sustain 10,000 residents."
+      description: "Led design of Aikya, a self-sustaining habitat; integrated systems including life support, energy, and structural subsystems."
     }
   ];
 
