@@ -19,6 +19,21 @@ const Model = () => {
     }
   ];
 
+  const cyberTruckImages = [
+    {
+        src: "/Yalda-Nikookar-Portfolio/Models/image.png",
+        caption: "Front view of the CyberTruck model",
+    },
+    {
+        src: "/Yalda-Nikookar-Portfolio/Models/image (1).png",
+        caption: "Detailed Assembly of CyberTruck model",
+    },
+    {
+        src: "/Yalda-Nikookar-Portfolio/Models/image (3).png",
+        caption: "Detailed view of CyberTruck features",
+    }
+  ];
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPageLoaded(true);
@@ -29,6 +44,41 @@ const Model = () => {
   const scrollToProjects = () => {
     document.getElementById("projects-section").scrollIntoView({ behavior: "smooth" });
   };
+
+  const renderProjectGrid = (images, title, projectLink, id) => (
+    <div id={id} className="min-h-screen flex flex-col items-center justify-center w-full px-6 py-16">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center justify-center mb-14">
+          <div className="h-0.5 bg-gradient-to-r from-transparent via-pink-300 to-transparent w-16 mr-4"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text">{title}</h2>
+          <div className="h-0.5 bg-gradient-to-r from-transparent via-pink-300 to-transparent w-16 ml-4"></div>
+        </div>
+        
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-1000 ease-out ${
+            isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 delay-500'}`}>
+          {images.map((image, index) => (
+            <div key={index} className="overflow-hidden rounded-lg shadow-lg bg-black/20 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              onMouseEnter={() => setActiveIndex(`${id}-${index}`)} onMouseLeave={() => setActiveIndex(null)}>
+              <div className="relative">
+                <img src={image.src} alt={image.caption} className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110" />
+                <div className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end transition-opacity duration-300 ${
+                    activeIndex === `${id}-${index}` ? 'opacity-100' : 'opacity-0'}`}>
+                  <p className="text-white font-medium p-4">{image.caption}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className={`mt-16 text-center transition-all duration-1000 ease-out ${
+            isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 delay-700'}`}>
+          <a href={projectLink} target="_blank" rel="noopener noreferrer">
+            <button className="bg-pink-500 text-white py-3 px-8 rounded-lg font-medium hover:bg-pink-600 transition-all">View Full Project Details</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <section className="min-h-screen flex flex-col relative bg-gradient-to-b from-black/70 to-black/80 text-white">
@@ -41,38 +91,21 @@ const Model = () => {
         <button onClick={scrollToProjects} className="mt-6 px-6 py-3 bg-pink-500 text-white rounded-lg font-medium hover:bg-pink-600 transition-all">View Models</button>
       </div>
 
-      {/* Full-Screen Projects Section */}
-      <div id="projects-section" className="h-screen flex flex-col items-center justify-center w-full px-6 py-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-center mb-14">
-            <div className="h-0.5 bg-gradient-to-r from-transparent via-pink-300 to-transparent w-16 mr-4"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text">Beaver Dam Project</h2>
-            <div className="h-0.5 bg-gradient-to-r from-transparent via-pink-300 to-transparent w-16 ml-4"></div>
-          </div>
-          
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-1000 ease-out ${
-              isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 delay-500'}`}>
-            {beaverDamImages.map((image, index) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-lg bg-black/20 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-                onMouseEnter={() => setActiveIndex(index)} onMouseLeave={() => setActiveIndex(null)}>
-                <div className="relative">
-                  <img src={image.src} alt={image.caption} className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110" />
-                  <div className={`absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end transition-opacity duration-300 ${
-                      activeIndex === index ? 'opacity-100' : 'opacity-0'}`}>
-                    <p className="text-white font-medium p-4">{image.caption}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className={`mt-16 text-center transition-all duration-1000 ease-out ${
-              isPageLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 delay-700'}`}>
-            <a href="https://docs.google.com/presentation/d/1eg2abKjcC2-xmuAgs1ML8ArVoMVfm2Hp6q60IoXDtn8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-              <button className="bg-pink-500 text-white py-3 px-8 rounded-lg font-medium hover:bg-pink-600 transition-all">View Full Project Details</button>
-            </a>
-          </div>
-        </div>
+      {/* Projects Sections */}
+      <div id="projects-section">
+        {renderProjectGrid(
+          beaverDamImages, 
+          "Beaver Dam Project", 
+          "https://docs.google.com/presentation/d/1eg2abKjcC2-xmuAgs1ML8ArVoMVfm2Hp6q60IoXDtn8/edit?usp=sharing",
+          "beaver-dam-section"
+        )}
+        
+        {renderProjectGrid(
+          cyberTruckImages, 
+          "CyberTruck Project", 
+          "https://docs.google.com/presentation/d/cybertruck-presentation/edit?usp=sharing",
+          "cybertruck-section"
+        )}
       </div>
     </section>
   );
